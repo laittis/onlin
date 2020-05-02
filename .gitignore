@@ -12,6 +12,7 @@ buildNumber.properties
 
 # Intellij
 .idea/
+*.iml
 
 # Ecplipse
 .metadata
