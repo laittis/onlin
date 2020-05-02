@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>fi.laittis</groupId>
+    <groupId>fi.laittis.onlin</groupId>
     <artifactId>backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -15,5 +15,33 @@
     
     <!-- global properties -->
     <properties>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>11</java.version>
+        <!-- plugins -->
+        <gitflow-maven-plugin.version>1.14.0</gitflow-maven-plugin.version>
     </properties>
+    
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>com.amashchenko.maven.plugin</groupId>
+            <artifactId>gitflow-maven-plugin</artifactId>
+            <version>${gitflow-maven-plugin.version}</version>
+            <configuration>
+                <!-- optional configuration -->
+                <enableSshAgent>true</enableSshAgent>
+                <pushFeatures>true</pushFeatures>
+                <pushReleases>true</pushReleases>
+                <pushHotfixes>true</pushHotfixes>
+                <noDeploy>true</noDeploy>
+                <gitFlowConfig>
+                    <productionBranch>master</productionBranch>
+                    <developmentBranch>dev</developmentBranch>
+                    <versionTagPrefix>rc-</versionTagPrefix>
+                </gitFlowConfig>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 </project>
