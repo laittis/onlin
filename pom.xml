@@ -40,7 +40,11 @@
                     <gitFlowConfig>
                         <productionBranch>master</productionBranch>
                         <developmentBranch>dev</developmentBranch>
+                        <featureBranchPrefix>feature/</featureBranchPrefix>
+                        <releaseBranchPrefix>release/</releaseBranchPrefix>
+                        <hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
                         <versionTagPrefix>rc-</versionTagPrefix>
+                        <origin>origin</origin>
                     </gitFlowConfig>
                 </configuration>
             </plugin>
